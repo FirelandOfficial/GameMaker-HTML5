@@ -1673,6 +1673,8 @@ function audio_sound_length(_soundid)
 		 }
 		 else
 		 {
+            if(audio_sampledata[ sampleid ].buffer == null)
+                return 0;
 			return audio_sampledata[ sampleid ].buffer.duration;
 		 }
 	}

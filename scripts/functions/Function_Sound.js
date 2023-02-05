@@ -1448,8 +1448,11 @@ function audio_sound_length(_soundid)
             return buffer_sampledata[assetIndex - BASE_BUFFER_SOUND_INDEX].buffer.duration;
 		 else if (IsSoundQueued(assetIndex))
             return 0.0;
-         else
-			return audio_sampledata[assetIndex].buffer.duration;
+         else{
+            if(audio_sampledata[assetIndex].buffer)
+			    return audio_sampledata[assetIndex].buffer.duration;
+            return 0;
+         }
 	}
 
 	return -1.0;

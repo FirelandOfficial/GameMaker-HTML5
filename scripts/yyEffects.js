@@ -380,7 +380,7 @@ yyFilterHost.prototype.LayerBegin = function (_layerID)
 
 		// Draw everything on this layer to the temporary surface
 		surface_set_target(this.tempSurfaceID);
-		draw_clear_alpha(0, 0.0);
+		//draw_clear_alpha(0, 0.0);
 
 		if (pClonedCam != null)
 		{			
